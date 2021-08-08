@@ -1,4 +1,7 @@
-<img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg?format=2500w" width="350" title="camera control" alt="cam cntrl" align="center" vspace = "80">
+[![PyPI version](https://badge.fury.io/py/kinematik.svg)](https://badge.fury.io/py/DLC2Kinematics)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/kinematik.svg?color=purple&label=PyPi)](https://pypistats.org/packages/DLC2Kinematics)
+
+<img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg?format=2500w" width="750" title="camera control" alt="cam cntrl" align="center" vspace = "80">
 
 
 #### A post-deeplabcut module for kinematic analysis
