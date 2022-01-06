@@ -120,4 +120,8 @@ dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_len
     ```
     in the root directory.
   - Assign a reviewer, typically [MMathisLab](https://github.com/MMathisLab).
+  - sign CLA.
 
+## Acknowledgements
+
+This code is a collect of contributions from members of the Mathis Laboratory over the years. In particular: Tanmay Nath, Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Steffen Schneider, Mackenzie Mathis
