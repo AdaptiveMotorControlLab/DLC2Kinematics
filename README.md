@@ -103,6 +103,11 @@ dlc2kinematics.plot_3d_pca_reconstruction(df_vel, n_components=10, framenumber=5
                                      bodyparts2plot=bodyparts2plot, bp_to_connect=bp_to_connect)
 ```
 
+### UMAP Embeddings
+``` python
+dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_length=30, fit_transform=True, n_neighbors=30, n_components=3,metric="euclidean")
+```
+
 ## Contributing
 
 - If you spot an issue or have a question, please open an [issue](https://github.com/AdaptiveMotorControlLab/dlc2kinematics/issues) with a suitable tag.
