@@ -43,7 +43,7 @@ Compute acceleration:
 
 - For all bodyparts:
   ``` python
-  df_acc = dlc2kinematicscompute_acceleration(df,bodyparts=['all'])
+  df_acc = dlc2kinematics.compute_acceleration(df,bodyparts=['all'])
   ```
 - For only few bodyparts:
   ``` python
