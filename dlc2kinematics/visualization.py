@@ -219,13 +219,13 @@ class MultiVisualizer:
         self.n_vizs = len(vizs)
         self.nframes = min(viz.nframes for viz in vizs)
 
-    def populate_window(self, layout=None, **kwargs):
+    def populate_window(self, layout=None, show_axes=False, show_grid=False):
         if layout is None:
             grid = 111 + 10 * (self.n_vizs - 1)
             layout = [grid + n for n in range(self.n_vizs)]
         self.fig = plt.figure()
         for viz, loc in zip(self.vizs, layout):
-            viz.add_to_fig(self.fig, loc, **kwargs)
+            viz.add_to_fig(self.fig, loc, show_axes, show_grid)
         self.add_widgets()
         self.fig.canvas.mpl_connect("motion_notify_event", self.on_move)
         self.fig.canvas.mpl_connect("key_press_event", self.on_press)
