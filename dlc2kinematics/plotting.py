@@ -236,9 +236,7 @@ def plot_3d_pca_reconstruction(
         bodyparts = list(df.columns.get_level_values(1))[0::3]
         projected_reshape = projected.reshape(len(projected), len(bodyparts), 3)
         for idx, bp in enumerate(bodyparts):
-            df_projected.loc[:][scorer, bp, "x"] = projected_reshape[:, idx, 0]
-            df_projected.loc[:][scorer, bp, "y"] = projected_reshape[:, idx, 1]
-            df_projected.loc[:][scorer, bp, "z"] = projected_reshape[:, idx, 2]
+            df_projected.loc(axis=1)[scorer, bp] = projected_reshape[:, idx]
         pca_plot(
             num,
             v,
