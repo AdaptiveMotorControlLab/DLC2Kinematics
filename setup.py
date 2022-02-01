@@ -27,7 +27,7 @@ setuptools.setup(
         "ipython-genutils",
         "matplotlib>=3.0.3",
         "numpy>=1.14.5",
-        "pandas>1.0",
+        "pandas>=1.0",
         "python-dateutil",
         "pyyaml",
         "requests",
@@ -39,7 +39,7 @@ setuptools.setup(
         "tables",
         "umap",
         "tqdm",
-        "ruamel.yaml",
+        "ruamel.yaml>=0.15.0",
         "wheel",
     ],
     packages=setuptools.find_packages(),
@@ -51,5 +51,3 @@ setuptools.setup(
     entry_points="""[console_scripts]
             kin=kin:main""",
 )
-
-# https://stackoverflow.com/questions/39590187/in-requirements-txt-what-does-tilde-equals-mean
