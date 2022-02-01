@@ -6,7 +6,7 @@
 
 #### A post-deeplabcut module for kinematic analysis
 
-This repo will continue to grow, but here are some helper functions to get you started. Note, the API is subject to change. You can run the functions on data files obtained from running inference with [DeepLabCut](http://deeplabcut.org/).
+This repo will continue to grow, but here are some helper functions to get you started. Note, the API is subject to change. You can run the functions on data files obtained from running inference with [DeepLabCut](http://deeplabcut.org/). Currently, this code requires python 3.8 onwards. We recommend using the [DEEPLABCUT conda file](https://deeplabcut.github.io/DeepLabCut/docs/installation.html), and then simply run `pip install dlc2kinematics` within your environment.
 
 
 ## Quick start
