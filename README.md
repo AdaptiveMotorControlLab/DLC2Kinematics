@@ -125,4 +125,6 @@ dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_len
 ## Acknowledgements
 
 This code is a collect of contributions from members of the Mathis Laboratory over the years. In particular (alphabetical): 
-Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Mackenzie Mathis, Tanmay Nath, Steffen Schneider.
+Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Alexander Mathis, Mackenzie Mathis, Tanmay Nath, Steffen Schneider.
+
+
