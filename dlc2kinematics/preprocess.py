@@ -99,6 +99,7 @@ def smooth_trajectory(
     >>> df_smooth = kinematics.smooth_trajectory(df,bodyparts=['all'],window_length=11,order=3)
 
     """
+    df = df.copy()
     xy = df.columns.get_level_values("coords") != "likelihood"
     if bodyparts[0] == "all":
         mask = np.ones(df.shape[1], dtype=bool)
