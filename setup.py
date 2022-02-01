@@ -12,14 +12,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="kinematik",
+    name="dlc2kinematics",
     version="0.0.1",
     author="Mackenzie Mathis Lab Members",
     author_email="mackenzie@post.harvard.edu",
     description="Library for kinematic analysis of DeepLabCut outputs",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AdaptiveMotorControlLab/Kinematik/",
+    url="https://github.com/AdaptiveMotorControlLab/dlc2kinematics/",
     install_requires=[
         "h5py",
         "intel-openmp",
@@ -27,7 +27,7 @@ setuptools.setup(
         "ipython-genutils",
         "matplotlib>=3.0.3",
         "numpy>=1.14.5",
-        "pandas",
+        "pandas>1.0",
         "python-dateutil",
         "pyyaml",
         "requests",
