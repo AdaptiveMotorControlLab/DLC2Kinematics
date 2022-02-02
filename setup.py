@@ -37,7 +37,7 @@ setuptools.setup(
         "scikit-kinematics",
         "scipy",
         "tables",
-        "umap",
+        "umap-learn",
         "tqdm",
         "ruamel.yaml>=0.15.0",
         "wheel",
