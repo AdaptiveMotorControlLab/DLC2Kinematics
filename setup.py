@@ -25,7 +25,7 @@ setuptools.setup(
         "ipython",
         "ipython-genutils",
         "matplotlib>=3.0.3",
-        "numpy>=1.14.5",
+        "numpy<=1.21",
         "pandas>=1.0",
         "python-dateutil",
         "pyyaml",
