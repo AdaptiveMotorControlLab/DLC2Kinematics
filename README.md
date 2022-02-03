@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/dlc2kinematics.svg)](https://badge.fury.io/py/dlc2kinematics)
+[![Downloads](https://pepy.tech/badge/dlc2kinematics)](https://pepy.tech/project/dlc2kinematics)
 [![Downloads](https://pepy.tech/badge/dlc2kinematics/month)](https://pepy.tech/project/dlc2kinematics)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 [![Generic badge](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
