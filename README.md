@@ -1,5 +1,8 @@
-[![PyPI version](https://badge.fury.io/py/kinematik.svg)](https://badge.fury.io/py/DLC2Kinematics)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/kinematik.svg?color=purple&label=PyPi)](https://pypistats.org/packages/DLC2Kinematics)
+[![PyPI version](https://badge.fury.io/py/dlc2kinematics.svg)](https://badge.fury.io/py/dlc2kinematics)
+[![Downloads](https://pepy.tech/badge/dlc2kinematics/month)](https://pepy.tech/project/dlc2kinematics)
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+[![Generic badge](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Twitter Follow](https://img.shields.io/twitter/follow/dlc2kinematics.svg?label=dlc2kinematics&style=social)](https://twitter.com/DLC2Kinematics)
 
 <img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg?format=2500w" width="750" title="camera control" alt="cam cntrl" align="center" vspace = "80">
 
@@ -14,6 +17,7 @@ This repo will continue to grow, but here are some helper functions to get you s
 ``` bash
 pip install dlc2kinematics
 ```
+
 ## Useage
 
 ``` python
@@ -105,7 +109,9 @@ dlc2kinematics.plot_3d_pca_reconstruction(df_vel, n_components=10, framenumber=5
 
 ### UMAP Embeddings
 ``` python
-dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_length=30, fit_transform=True, n_neighbors=30, n_components=3,metric="euclidean")
+data = dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_length=30, fit_transform=True, n_neighbors=30, n_components=3,metric="euclidean")
+
+dlc2kinematics.plot_umap(data, size=5, alpha=1, color="indigo", figsize=(10, 6))
 ```
 
 ## Contributing
