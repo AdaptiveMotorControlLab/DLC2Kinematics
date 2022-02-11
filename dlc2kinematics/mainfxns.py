@@ -299,11 +299,9 @@ def compute_umap(
 
     # pandas dataframe managing
     df_clean = df.copy()
-    df_clean.columns = df_clean.columns.droplevel(
-        0
-    )  # Drop scorer row to make it easier to navigate in the df table
+
     key2 = ["x", "y"]
-    df_limbs = df_clean.loc[:, (key, key2)]  # Drop likelihood column
+    df_limbs = df_clean.loc[:, pd.IndexSlice[:, key, key2]] # "Drop" likelihood column
     n_frames, n_bodyparts = df_limbs.shape
     n_chunks = n_frames // chunk_length
 

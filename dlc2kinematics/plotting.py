@@ -273,9 +273,19 @@ def plot_umap(Y, size=5, alpha=1, color="indigo", figsize=(10, 6)):
     >>> c = np.random.rand(Y.shape[0],3)
     >>> dlc2kinematics.plot_umap(Y, 5, 1, c)
     """
+    
+    if Y.shape[1] < 2:
+        print("Please pick at least 2 components for plotting.")
+    else:
+        fig, ax = plt.subplots(figsize=figsize)
 
-    fig = plt.figure(figsize=figsize)
-    ax = Axes3D(fig)
-    ax.view_init(0, 20)
-    ax.dist = 8
-    ax.scatter(Y[:, 0], Y[:, 2], Y[:, 1], alpha=alpha, s=size, c=color)
+        if Y.shape[1] > 2:
+            ax = Axes3D(fig)
+            ax.view_init(0, 20)
+            ax.dist = 8
+            ax.scatter(Y[:, 0], Y[:, 1], Y[:, 2], alpha=alpha, s=size, c=color)
+        else:
+            ax.scatter(Y[:, 0], Y[:, 1], alpha=alpha, s=size, c=color)
+    
+
+        
