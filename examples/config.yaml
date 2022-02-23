@@ -1,0 +1,48 @@
+# Project definitions (do not edit)
+Task: mouse_reaching
+scorer: mackenzie
+date: Oct17
+
+# Project path (change when moving around)
+project_path: /fakepath
+
+# Plotting configuration
+skeleton:     # Note that the pairs must be defined, as you want them linked!
+  - - R_shoulder
+    - Right_elbow
+  - - Right_elbow
+    - Right_wrist
+  - - Right_wrist
+    - Right_backofhand
+  - - Right_wrist
+    - R_Wrist_Top
+  - - Right_wrist
+    - R_Wrist_Bottom
+  - - Right_backofhand
+    - R_Finger1_Base
+  - - Right_backofhand
+    - R_Finger2_Base
+  - - Right_backofhand
+    - R_Finger3_Base
+  - - Right_backofhand
+    - R_Finger4_Base
+skeleton_color: black
+pcutoff: 0.8
+colormap: cool
+dotsize: 15
+alphaValue: 0.8
+markerType: '*'
+markerColor: r
+
+# Number of cameras, camera names, path of the config files, shuffle index and trainingsetindex used to analyze videos:
+num_cameras: 2
+camera_names:
+- camera-1
+- camera-2
+scorername_3d: DLC_3D # Enter the scorer name for the 3D output
+trainingsetindex_camera-1: 0
+trainingsetindex_camera-2: 0
+config_file_camera-1: fakepath/config.yaml
+config_file_camera-2: fakepath/config.yaml
+shuffle_camera-1: 1
+shuffle_camera-2: 1
