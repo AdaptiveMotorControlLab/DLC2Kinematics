@@ -66,7 +66,7 @@ df_speed = dlc2kinematics.compute_speed(df,bodyparts=['nose','joystick'])
 To compute joint angles, we first create a dictionary where keys are the joint angles and the corresponding values are the set of bodyparts:
 
 ``` python
-joint_dict= {}
+joints_dict= {}
 joints_dict['R-Elbow']  = ['R_shoulder', 'Right_elbow', 'Right_wrist']
 ```
 
