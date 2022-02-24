@@ -193,7 +193,8 @@ def extract_kinematic_synergies(
 
 def compute_umap(
     df,
-    key,
+    keypoints=None,
+    pcutoff=0.6,
     chunk_length=30,
     fit_transform=True,
     n_neighbors=30,
@@ -234,7 +235,9 @@ def compute_umap(
     ----------
     df: original dataframe df, _, _ = dlc2kinematics.load_data(DLC_2D_file)
 
-    key: list of limbs of interests ex: key = ['LeftForelimb', 'RightForelimb']
+    keypoints: list of limbs of interests ex: key = ['LeftForelimb', 'RightForelimb'], if None, all bodyparts are taken into account
+
+    pcutoff: likelihood at which the keypoints are kept for analysis, if under pcutoff, set coord to 0
 
     chunk_length: Number of frames per segment. #TODO: add the posibility of a sliding window?
 
@@ -300,8 +303,16 @@ def compute_umap(
     # pandas dataframe managing
     df_clean = df.copy()
 
-    key2 = ["x", "y"]
-    df_limbs = df_clean.loc[:, pd.IndexSlice[:, key, key2]] # "Drop" likelihood column
+    if keypoints is None: # If no keypoints specified, use all
+        keypoints = df_clean.columns.get_level_values('bodyparts').unique().to_list()
+    
+    df_limbs = df_clean.loc[:, pd.IndexSlice[:, keypoints]]
+
+    temp = df_limbs.stack(level=['scorer', 'bodyparts']) # Stack with likelihood, x, y
+    temp.loc[temp['likelihood'] < pcutoff, ['x','y']] = 0.0 # Set values under pcutoff to 0.0 to exclude
+    unstacked_temp = temp.unstack(level=['scorer', 'bodyparts']) # Unstack again
+    unstacked_temp.reorder_levels(['scorer','bodyparts','coords'], axis=1).reindex_like(df_limbs) # Re-index like original df
+
     n_frames, n_bodyparts = df_limbs.shape
     n_chunks = n_frames // chunk_length
 
