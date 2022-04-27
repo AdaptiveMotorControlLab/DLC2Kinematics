@@ -110,9 +110,9 @@ dlc2kinematics.plot_3d_pca_reconstruction(df_vel, n_components=10, framenumber=5
 
 ### UMAP Embeddings
 ``` python
-data = dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_length=30, fit_transform=True, n_neighbors=30, n_components=3,metric="euclidean")
+embedding, transformed_data = dlc2kinematics.compute_umap(df, key=['LeftForelimb', 'RightForelimb'], chunk_length=30, fit_transform=True, n_neighbors=30, n_components=3,metric="euclidean")
 
-dlc2kinematics.plot_umap(data, size=5, alpha=1, color="indigo", figsize=(10, 6))
+dlc2kinematics.plot_umap(transformed_data, size=5, alpha=1, color="indigo", figsize=(10, 6))
 ```
 
 ## Contributing
