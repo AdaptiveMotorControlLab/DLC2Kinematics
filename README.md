@@ -3,7 +3,7 @@
 [![Downloads](https://pepy.tech/badge/dlc2kinematics/month)](https://pepy.tech/project/dlc2kinematics)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 [![Generic badge](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Twitter Follow](https://img.shields.io/twitter/follow/dlc2kinematics.svg?label=dlc2kinematics&style=social)](https://twitter.com/DLC2Kinematics)
+[![Twitter Follow](https://img.shields.io/twitter/follow/DeepLabCut.svg?label=DeepLabCut&style=social)](https://twitter.com/DeepLabCut)
 
 <img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg?format=2500w" width="750" title="camera control" alt="cam cntrl" align="center" vspace = "80">
 
