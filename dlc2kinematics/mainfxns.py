@@ -120,9 +120,9 @@ def compute_speed(df, bodyparts, filter_window=3, order=1):
     try:
         levels = vel.columns.levels
     except AttributeError:
-        levels = vel.columns.values
+        levels = [vel.columns.values]
     vel.columns = pd.MultiIndex.from_product(
-        [scorer] + [levels] + [["speed"]],
+        [scorer] + levels + [["speed"]],
         names=["scorer"] + vel.columns.names + ["coords"],
     )
     return vel.join(prob)
@@ -305,7 +305,7 @@ def compute_umap(
 
     if keypoints is None: # If no keypoints specified, use all
         keypoints = df_clean.columns.get_level_values('bodyparts').unique().to_list()
-    
+
     df_limbs = df_clean.loc[:, pd.IndexSlice[:, keypoints]]
 
     temp = df_limbs.stack(level=['scorer', 'bodyparts']) # Stack with likelihood, x, y
