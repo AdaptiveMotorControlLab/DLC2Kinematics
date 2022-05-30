@@ -40,7 +40,10 @@ def load_data(filename, smooth=False, filter_window=3, order=1):
     >>> df,bodyparts,scorer = dlc2kinematics.load_data('C:\\yourusername\\rig-95\\video.h5')
 
     """
-    df = pd.read_hdf(filename, "df_with_missing")
+    try:
+        df = pd.read_hdf(filename, "df_with_missing")
+    except KeyError:
+        df = pd.read_hdf(filename)
     bodyparts = df.columns.get_level_values("bodyparts").unique().to_list()
     scorer = df.columns.get_level_values(0)[0]
     if smooth:
