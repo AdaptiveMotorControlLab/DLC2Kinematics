@@ -4,4 +4,4 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools_scm]
-write_to = "dlc2kinematics/_version.py"
+write_to = "src/dlc2kinematics/_version.py"
