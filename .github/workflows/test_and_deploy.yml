@@ -6,14 +6,12 @@ name: tests
 on:
   push:
     branches:
-      - main
-      - npe2
+      - master
     tags:
       - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
   pull_request:
     branches:
-      - main
-      - npe2
+      - master
   workflow_dispatch:
 
 jobs:
