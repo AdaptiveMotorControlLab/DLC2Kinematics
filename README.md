@@ -5,6 +5,7 @@
 [![Generic badge](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![codecov](https://codecov.io/gh/AdaptiveMotorControlLab/DLC2Kinematics/branch/master/graph/badge.svg)](https://codecov.io/gh/AdaptiveMotorControlLab/DLC2Kinematics)
 [![Twitter Follow](https://img.shields.io/twitter/follow/DeepLabCut.svg?label=DeepLabCut&style=social)](https://twitter.com/DeepLabCut)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6669074.svg)](https://doi.org/10.5281/zenodo.6669074)
 
 <img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg?format=2500w" width="750" title="camera control" alt="cam cntrl" align="center" vspace = "80">
 
@@ -135,4 +136,25 @@ dlc2kinematics.plot_umap(transformed_data, size=5, alpha=1, color="indigo", figs
 This code is a collect of contributions from members of the Mathis Laboratory over the years. In particular (alphabetical): 
 Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Alexander Mathis, Mackenzie Mathis, Tanmay Nath, Steffen Schneider.
 
+If you use this code, please cite:
+
+```
+@software{mathis_mackenzie_2020_6669074,
+  author       = {Mathis, Mackenzie and
+                  Lauer, Jessy and
+                  Nath, Tanmay and
+                  Beauzile, Michael and
+                  Hausmann, Sébastien and
+                  Schneider, Steffen and
+                  Mathis, Alexander},
+  title        = {{DLC2Kinematics: a post-deeplabcut module for 
+                   kinematic analysis}},
+  month        = feb,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v0.0.4},
+  doi          = {10.5281/zenodo.6669074},
+  url          = {https://doi.org/10.5281/zenodo.6669074}
+}
+```
 
