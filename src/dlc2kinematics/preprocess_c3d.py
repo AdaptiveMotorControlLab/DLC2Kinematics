@@ -39,7 +39,7 @@ def load_c3d_data(filename, scorer="scorer", smooth=False, filter_window=3, orde
     Linux/MacOS
     >>> df, bodyparts, scorer, first_frame, last_frame, sample_rate = preprocess_c3d.load_c3d_data('Users/user/Documents/c3d_dlc/runway03.c3d')
     Windows
-    >>> df,bodyparts,scorer = dlc2kinematics.load_data('C:\\yourusername\\runway03.c3d')
+    >>> df, bodyparts, scorer, first_frame, last_frame, sample_rate = dlc2kinematics.preprocess_c3d.load_c3d_data('C:\\yourusername\\runway03.c3d')
 
 
     """
