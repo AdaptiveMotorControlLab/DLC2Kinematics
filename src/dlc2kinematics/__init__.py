@@ -6,6 +6,7 @@ https://github.com/AdaptiveMotorControlLab/dlc2kinematics/
 
 from dlc2kinematics.version import __version__, VERSION
 from dlc2kinematics.preprocess import load_data, smooth_trajectory
+from dlc2kinematics.preprocess_c3d import load_c3d_data
 from dlc2kinematics.mainfxns import (
     compute_velocity,
     compute_acceleration,

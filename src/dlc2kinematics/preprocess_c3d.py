@@ -1,7 +1,7 @@
 import c3d
 import numpy as np
 import pandas as pd
-from preprocess import smooth_trajectory
+from dlc2kinematics.preprocess import smooth_trajectory
 
 
 def load_c3d_data(filename, scorer="scorer", smooth=False, filter_window=3, order=1):
