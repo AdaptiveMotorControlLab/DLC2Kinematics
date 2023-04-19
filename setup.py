@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dlc2kinematics",
-    version="0.0.4",
+    version="0.0.5",
     author="Mackenzie Mathis Lab Members",
     author_email="mackenzie@post.harvard.edu",
     description="Library for kinematic analysis of DeepLabCut outputs",
@@ -25,7 +25,7 @@ setuptools.setup(
         "ipython",
         "ipython-genutils",
         "matplotlib>=3.0.3",
-        "numpy<=1.21",
+        "numpy",
         "pandas>=1.0",
         "python-dateutil",
         "pyyaml",
