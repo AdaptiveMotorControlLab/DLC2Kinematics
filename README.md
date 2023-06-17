@@ -134,15 +134,16 @@ dlc2kinematics.plot_umap(transformed_data, size=5, alpha=1, color="indigo", figs
 ## Acknowledgements
 
 This code is a collect of contributions from members of the Mathis Laboratory over the years. In particular (alphabetical): 
-Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Alexander Mathis, Mackenzie Mathis, Tanmay Nath, Steffen Schneider.
+Michael Beauzile, Sebastien Hausmann, Jessy Lauer, Alexander Mathis, Mackenzie Mathis, Tanmay Nath, Kai Sandbrink, Steffen Schneider.
 
 If you use this code, please cite:
 
 ```
-@software{mathis_mackenzie_2020_6669074,
+@software{dlc2kinematics,
   author       = {Mathis, Mackenzie and
                   Lauer, Jessy and
                   Nath, Tanmay and
+                  Sandbrink, Kai and
                   Beauzile, Michael and
                   Hausmann, Sébastien and
                   Schneider, Steffen and
