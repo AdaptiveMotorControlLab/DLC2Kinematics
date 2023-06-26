@@ -21,6 +21,7 @@ setuptools.setup(
     url="https://github.com/AdaptiveMotorControlLab/dlc2kinematics/",
     install_requires=[
         "h5py",
+        "c3d",
         "ipython",
         "ipython-genutils",
         "matplotlib>=3.0.3",
