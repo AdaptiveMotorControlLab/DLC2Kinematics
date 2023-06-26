@@ -68,9 +68,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U setuptools setuptools_scm wheel twine build
       - name: Build package
-      - name: Publish package
         run: |
           python -m build .
+      - name: Publish package
         if: contains(github.ref, 'tags')
         env:
           TWINE_USERNAME: __token__
