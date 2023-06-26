@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dlc2kinematics",
-    version="0.0.6",
+    version="0.0.7",
     author="Mackenzie Mathis Lab Members",
     author_email="mackenzie@post.harvard.edu",
     description="Library for kinematic analysis of DeepLabCut outputs",
@@ -21,6 +21,7 @@ setuptools.setup(
     url="https://github.com/AdaptiveMotorControlLab/dlc2kinematics/",
     install_requires=[
         "h5py",
+        "c3d",
         "ipython",
         "ipython-genutils",
         "matplotlib>=3.0.3",
