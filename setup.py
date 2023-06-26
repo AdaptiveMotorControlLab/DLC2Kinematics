@@ -31,7 +31,7 @@ setuptools.setup(
         "requests",
         "setuptools",
         "scikit-image",
-        "scikit-learn",
+        "scikit-learn<1.2.2",
         "scikit-kinematics",
         "scipy",
         "tables",
