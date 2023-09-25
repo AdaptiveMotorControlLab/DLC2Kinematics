@@ -129,13 +129,14 @@ def compute_joint_angles(
         angles = dict()
         for joint, bpts in joints_dict.items():
             print(f"Computing joint angles for {joint}")
-            temp = df.loc(axis=1)[:, bpts]
             if is_multianimal:
+                temp = df.loc(axis=1)[:, :, bpts]
                 for animal, frame in temp.groupby(level="individuals", axis=1):
                     angles[f"{joint}_{animal}"] = frame.apply(
                         auxiliaryfunctions.jointangle_calc, axis=1
                     ).values
             else:
+                temp = df.loc(axis=1)[:, bpts]
                 angles[joint] = temp.apply(
                     auxiliaryfunctions.jointangle_calc, axis=1
                 ).values
