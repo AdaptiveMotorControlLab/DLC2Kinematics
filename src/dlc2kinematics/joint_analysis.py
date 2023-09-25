@@ -129,8 +129,7 @@ def compute_joint_angles(
         angles = dict()
         for joint, bpts in joints_dict.items():
             print(f"Computing joint angles for {joint}")
-            mask = df.columns.get_level_values("bodyparts").isin(bpts)
-            temp = df.loc[:, mask]
+            temp = df.loc(axis=1)[:, bpts]
             if is_multianimal:
                 for animal, frame in temp.groupby(level="individuals", axis=1):
                     angles[f"{joint}_{animal}"] = frame.apply(
