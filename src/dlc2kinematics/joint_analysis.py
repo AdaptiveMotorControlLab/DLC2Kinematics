@@ -101,10 +101,10 @@ def compute_joint_angles(
 
         def filter_low_prob(cols, prob):
             mask = cols.iloc[:, 2] < prob
-            cols.loc[mask, :2] = np.nan
+            cols.iloc[mask, :2] = np.nan
             return cols
 
-        df = df.groupby("bodyparts", axis=1).apply(filter_low_prob, prob=pcutoff)
+        df = df.groupby("bodyparts", axis=1, group_keys=False).apply(filter_low_prob, prob=pcutoff)
 
     angle_names = list(joints_dict)
     if not destfolder:
