@@ -4,5 +4,5 @@ dlc2kinematics
 https://github.com/AdaptiveMotorControlLab/dlc2kinematics/
 """
 
-__version__ = "0.0.7"
+__version__ = "0.1.0"
 VERSION = __version__
