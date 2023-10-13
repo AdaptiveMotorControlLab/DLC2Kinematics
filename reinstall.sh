@@ -1,3 +1,3 @@
 pip uninstall dlc2kinematics
 python3 setup.py sdist bdist_wheel
-pip install dist/dlc2kinematics-0.0.7-py3-none-any.whl
+pip install dist/dlc2kinematics-0.1.0-py3-none-any.whl
