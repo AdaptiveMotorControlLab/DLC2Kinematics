@@ -228,7 +228,7 @@ def doubleangle_calc(pos):
     pos = pos.reshape((3, 3))
     # print(pos)
     u = pos[1, :] - pos[0, :]
-    v = pos[2, :] - pos[2, :]
+    v = pos[1, :] - pos[2, :]
 
     rel = v - u
 
