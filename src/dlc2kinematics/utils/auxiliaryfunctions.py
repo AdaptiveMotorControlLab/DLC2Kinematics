@@ -132,7 +132,7 @@ def jointquat_calc(pos, use4d=False):
     pos = pos.reshape((3, 3))
     # print(pos)
     u = pos[1, :] - pos[0, :]
-    v = pos[2, :] - pos[1, :]  #
+    v = pos[1, :] - pos[2, :]
     # print(u.shape)
     # print(v.shape)
     q_shortest_rotation = vector.q_shortest_rotation(u.astype(float), v.astype(float))
@@ -228,17 +228,16 @@ def doubleangle_calc(pos):
     pos = pos.reshape((3, 3))
     # print(pos)
     u = pos[1, :] - pos[0, :]
-    v = pos[2, :] - pos[1, :]
+    v = pos[2, :] - pos[2, :]
 
     rel = v - u
 
     x = rel[0]
     y = rel[1]
     z = rel[2]
-
+    # yaw, pitch relative to the vertical plane (x-z plane)
     yaw = np.arctan(x / z) * 180 / np.pi
-
-    padj = np.sqrt(x ** 2) + np.sqrt(z ** 2)
+    padj = np.sqrt((x ** 2) + (z ** 2))
     pitch = np.arctan(padj / y) * 180.0 / np.pi
 
     return np.array([pitch, yaw])
