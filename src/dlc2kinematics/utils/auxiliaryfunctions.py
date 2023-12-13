@@ -236,7 +236,7 @@ def doubleangle_calc(pos):
     y = rel[1]
     z = rel[2]
     # yaw, pitch relative to the vertical plane (x-z plane)
-    yaw = np.arctan(x / z) * 180 / np.pi
+    yaw = np.rad2deg(np.arctan2(x, z))
     padj = np.sqrt((x ** 2) + (z ** 2))
     pitch = np.arctan(padj / y) * 180.0 / np.pi
 
